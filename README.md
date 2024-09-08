@@ -110,7 +110,7 @@ For Android, manual linking can be performed as follows:
 To use `react-native-restart-app`, import it into your component and call the `restart` method when needed.
 
 ```javascript
-import { restart } from 'react-native-restart-app';
+import restart from 'react-native-restart-app';
 
 // Example: Restart the app after a configuration change
 const handleRestart = () => {
@@ -136,10 +136,6 @@ const changeLanguage = (language) => {
 This will cause the app to reload and apply any new configurations, such as a language change, theme change, or other critical updates.
 
 ---
-
-### Keywords
-
-react-native, react-native-restart-app, restart, react
 
 ## License
 
