@@ -6,7 +6,8 @@ A simple module to restart your React Native app programmatically. This module w
 
 1. [Description](#description)
 2. [Installation](#installation)
-   - [Auto-Linking Setup (React Native >= 0.60)](#auto-linking-setup-react-native--060)
+   - [React Native >= 0.60](#react-native--060)
+   - [Extra Step for React Native <= 0.67](#extra-step-for-react-native--067)
    - [Manual iOS Installation](#manual-ios-installation)
    - [Manual Android Installation](#manual-android-installation)
 3. [Usage](#usage)
@@ -19,7 +20,7 @@ A simple module to restart your React Native app programmatically. This module w
 
 ## Installation
 
-### Auto-Linking Setup (React Native >= 0.60)
+### React Native >= 0.60
 
 For React Native version 0.60 and above, auto-linking will handle the linking of the library. Simply run the following command to install the module:
 
@@ -27,6 +28,36 @@ For React Native version 0.60 and above, auto-linking will handle the linking of
 npm install react-native-restart-app
 # or
 yarn add react-native-restart-app
+```
+
+Run `pod install` in the `ios` directory to install the necessary pods:
+
+```bash
+cd ios/
+pod install
+```
+
+### Extra Step for React Native <= 0.67
+
+For React Native versions 0.67 and below, you need to add an extra step in the `Podfile`:
+
+Add the following to your `Podfile`:
+
+```ruby
+pod 'react-native-restart-app', :path => '../node_modules/react-native-restart-app'
+```
+
+Then, run `pod install` in the `ios` directory to install the necessary pods:
+
+```bash
+cd ios/
+pod install
+```
+
+Build your project using Xcode or via CLI:
+
+```bash
+npx react-native run-ios
 ```
 
 ### Manual iOS Installation
@@ -105,6 +136,10 @@ const changeLanguage = (language) => {
 This will cause the app to reload and apply any new configurations, such as a language change, theme change, or other critical updates.
 
 ---
+
+### Keywords
+
+react-native, react-native-restart-app, restart, react
 
 ## License
 

@@ -17,6 +17,6 @@ const RestartApp = NativeModules.RestartApp
       }
     );
 
-export function restart() {
+export default function restart() {
   return RestartApp.restart();
 }
