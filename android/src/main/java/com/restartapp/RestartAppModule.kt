@@ -1,9 +1,10 @@
 package com.restartapp
 
+import com.facebook.react.ReactApplication
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
+
 
 class RestartAppModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
@@ -12,11 +13,12 @@ class RestartAppModule(reactContext: ReactApplicationContext) :
     return NAME
   }
 
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
-  fun multiply(a: Double, b: Double, promise: Promise) {
-    promise.resolve(a * b)
+  fun restart() {
+    val reactInstanceManager = (reactApplicationContext.applicationContext as ReactApplication)
+      .reactNativeHost
+      .reactInstanceManager
+    reactInstanceManager.devSupportManager.handleReloadJS()
   }
 
   companion object {
