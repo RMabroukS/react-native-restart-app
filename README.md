@@ -1,3 +1,5 @@
+<img src="./free-palestine.jpg" title="Free Palestine" width="800">
+
 # react-native-restart-app
 
 A simple module to restart your React Native app programmatically. This module works on both iOS and Android platforms, providing a unified API to restart the application when needed, such as after a configuration change or an error recovery action.
