@@ -1,6 +1,6 @@
 {
   "name": "react-native-restart-app",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "A simple module to restart a React Native app",
   "source": "./src/index.tsx",
   "main": "./src/index.tsx",
