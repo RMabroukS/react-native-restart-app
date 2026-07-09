@@ -1,5 +1,3 @@
-<img src="./free-palestine.jpg" title="Free Palestine" width="800">
-
 # react-native-restart-app
 
 Programmatically restart a React Native application on iOS and Android — in both debug and release builds, with Old Architecture and New Architecture (TurboModule) support.
